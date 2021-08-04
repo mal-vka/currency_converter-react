@@ -1,0 +1,11 @@
+.calculator__formParagraph {
+    margin: 20px 0;
+}
+
+.calculator__formField {
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(238, 238, 238);
+}
