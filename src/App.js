@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { currencies } from "./currencies";
+import { currencies } from "./utils/currencies";
 import Background from "./Background";
 import Header from "./Header";
 import Calculator from "./Calculator";
