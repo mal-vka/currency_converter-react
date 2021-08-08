@@ -2,8 +2,8 @@ import "./style.css";
 
 const Background = (props) => (
 
-    <div class="background">
-        <div class="container">
+    <div className="background">
+        <div className="container">
             {props.children}
         </div>
     </div>

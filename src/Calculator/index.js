@@ -1,7 +1,7 @@
 import "./style.css";
 
 const Calculator = (props) => (
-    <div class="calculator">
+    <div className="calculator">
         {props.body} {props.result}
     </div>
 
