@@ -1,8 +1,16 @@
 import "./style.css";
 
-const ResultField = () => (
+const ResultField = (props) => (
     <div className="calculator__resultField">
-        <span>AAA</span>
+        {!!props.result && (
+            <>
+                {props.result.amount.toFixed(2)}&nbsp;{props.result.currencyFrom}=
+                {" "}
+                <strong>
+                    {props.result.result.toFixed(2)}&nbsp;{props.result.currencyTo}
+                </strong>
+            </>
+        )}
     </div>
 );
 
