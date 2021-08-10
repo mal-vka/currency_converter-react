@@ -26,7 +26,7 @@ const Form = (props) => {
                         <input
                             value={amount}
                             onChange={onEnterAmount}
-                            className="calculator__formField calculator__formField--amount"
+                            className="calculator__formField calculator__formField"
                             type="number" min="10" max="100000" step="1"
                             required
                         />
