@@ -2,9 +2,8 @@ import "./style.css";
 
 const Calculator = (props) => (
     <div className="calculator">
-        {props.body} {props.result}
+        {props.body} {props.resultField}
     </div>
-
 );
 
 export default Calculator;

@@ -10,3 +10,50 @@
     padding: 0 10px;
     text-transform: uppercase;
 }
+
+.calculator__formParagraph {
+    margin: 20px 0;
+}
+
+.calculator__formField {
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(238, 238, 238);
+}
+
+.calculator__formField--amount {
+    margin-right: 0;
+}
+
+.button {
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid rgb(238, 238, 238);
+    margin: 10px;
+    font-size: 18px;
+}
+
+.button--submit:hover {
+    background-color: rgba(65, 180, 250, 0.5);
+    border: none;
+}
+
+.button--reset:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    border: none;
+}
+
+.button--submit:active {
+    color: rgb(238, 238, 238);
+    background-color: rgb(65, 180, 250, 0.4);
+    border: none;
+}
+
+.button--reset:active {
+    color: rgb(238, 238, 238);
+    background-color: rgba(255, 0, 0, 0.4);
+    border: none;
+}
