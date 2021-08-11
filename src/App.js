@@ -4,8 +4,6 @@ import Background from "./Background";
 import Header from "./Header";
 import Calculator from "./Calculator";
 import Form from "./Form";
-// import Inputs from "./Inputs";
-// import Buttons from "./Buttons";
 import ResultField from "./ResultField";
 import Footer from "./Footer";
 
@@ -39,6 +37,9 @@ function App() {
     });
   };
 
+  const resetResult = () => {
+    setResult("");
+  };
 
   return (
     <Background>
@@ -54,6 +55,7 @@ function App() {
             title="Kalkulator walut"
             currencies={currencies}
             calcResult={calcResult}
+            resetResult={resetResult}
           />
         }
         resultField={<ResultField result={result} />}

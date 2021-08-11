@@ -17,8 +17,17 @@ const Form = (props) => {
         props.calcResult(amount, currencyFrom, currencyTo);
     };
 
+    const onFormReset = (event) => {
+        event.preventDefault();
+
+        setAmount(100);
+        setCurrencyFrom(currencies[0].name);
+        setCurrencyTo(currencies[1].name);
+        props.resetResult();
+    };
+
     return (
-        <form onSubmit={onFormSubmit} className="calculator__form" >
+        <form onSubmit={onFormSubmit} onReset={onFormReset} className="calculator__form" >
             <fieldset className="calculator__formFieldset">
                 <legend className="calculator__formLegend">{props.title}</legend>
                 <p className="calculator__formParagraph">
