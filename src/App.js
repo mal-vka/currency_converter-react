@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { currencies } from "./utils/currencies";
 import Background from "./Background";
+import Clock from "./Clock";
 import Header from "./Header";
 import Calculator from "./Calculator";
 import Form from "./Form";
@@ -43,6 +44,8 @@ function App() {
 
   return (
     <Background>
+
+      <Clock />
 
       <Header
         title="Twój kantor"

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { currencies } from "../utils/currencies";
 
 const Form = (props) => {
-
     const [amount, setAmount] = useState("100");
     const [currencyFrom, setCurrencyFrom] = useState(currencies[0].name);
     const [currencyTo, setCurrencyTo] = useState(currencies[1].name);
@@ -19,7 +18,6 @@ const Form = (props) => {
 
     const onFormReset = (event) => {
         event.preventDefault();
-
         setAmount(100);
         setCurrencyFrom(currencies[0].name);
         setCurrencyTo(currencies[1].name);
@@ -75,7 +73,7 @@ const Form = (props) => {
                 </p>
             </fieldset>
         </form >
-    )
-}
+    );
+};
 
 export default Form;

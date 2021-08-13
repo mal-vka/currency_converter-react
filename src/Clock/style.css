@@ -1,0 +1,8 @@
+.clock {
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+    padding: 5px 10px 0 0;
+    margin-bottom: 50px;
+}
