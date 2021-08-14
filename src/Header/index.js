@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Header = (props) => (
+const Header = ({ title, paragraph }) => (
     <section className="header">
-        <h1 className="header__title">{props.title}</h1>
-        <p className="header__paragraph">{props.paragraph}</p>
+        <h1 className="header__title">{title}</h1>
+        <p className="header__paragraph">{paragraph}</p>
     </section>
 );
 

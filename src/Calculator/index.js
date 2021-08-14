@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Calculator = (props) => (
+const Calculator = ({ body, resultField }) => (
     <div className="calculator">
-        {props.body} {props.resultField}
+        {body} {resultField}
     </div>
 );
 

@@ -1,19 +1,18 @@
 import "./style.css";
 import { useState } from "react";
-import { currencies } from "../utils/currencies";
 
-const Form = (props) => {
+const Form = ({ calcResult, resetResult, title, currencies }) => {
     const [amount, setAmount] = useState("100");
     const [currencyFrom, setCurrencyFrom] = useState(currencies[0].name);
     const [currencyTo, setCurrencyTo] = useState(currencies[1].name);
 
-    const onEnterAmount = (event) => setAmount(event.target.value);
-    const onSelectCurrencyFromChange = (event) => setCurrencyFrom(event.target.value);
-    const onSelectCurrencyToChange = (event) => setCurrencyTo(event.target.value);
+    const onEnterAmount = ({ target }) => setAmount(target.value);
+    const onSelectCurrencyFromChange = ({ target }) => setCurrencyFrom(target.value);
+    const onSelectCurrencyToChange = ({ target }) => setCurrencyTo(target.value);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        props.calcResult(amount, currencyFrom, currencyTo);
+        calcResult(amount, currencyFrom, currencyTo);
     };
 
     const onFormReset = (event) => {
@@ -21,13 +20,13 @@ const Form = (props) => {
         setAmount(100);
         setCurrencyFrom(currencies[0].name);
         setCurrencyTo(currencies[1].name);
-        props.resetResult();
+        resetResult();
     };
 
     return (
         <form onSubmit={onFormSubmit} onReset={onFormReset} className="calculator__form" >
             <fieldset className="calculator__formFieldset">
-                <legend className="calculator__formLegend">{props.title}</legend>
+                <legend className="calculator__formLegend">{title}</legend>
                 <p className="calculator__formParagraph">
                     <label className="calculator__formLabel">Chcę wymienić
                         <input
@@ -45,7 +44,7 @@ const Form = (props) => {
                             className="calculator__formField"
                             name="currencyFrom"
                         >
-                            {props.currencies.map(currency => (
+                            {currencies.map(currency => (
                                 <option key={currency.id} value={currency.name}>
                                     {currency.name}
                                 </option>
@@ -59,7 +58,7 @@ const Form = (props) => {
                             className="calculator__formField"
                             name="currencyTo"
                         >
-                            {props.currencies.map(currency => (
+                            {currencies.map(currency => (
                                 <option key={currency.id} value={currency.name}>
                                     {currency.name}
                                 </option>
