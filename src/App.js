@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { currencies } from "./utils/currencies";
-import Background from "./Background";
+import Container from "./Container";
+import Main from "./Main";
 import Clock from "./Clock";
 import Header from "./Header";
 import Calculator from "./Calculator";
@@ -43,30 +44,32 @@ function App() {
   };
 
   return (
-    <Background>
+    <Container>
+      <Main>
 
-      <Clock />
+        <Clock />
 
-      <Header
-        title="Twój kantor"
-        paragraph="najlepsze kursy walut w internecie"
-      />
+        <Header
+          title="Twój kantor"
+          paragraph="najlepsze kursy walut w internecie"
+        />
 
-      <Calculator
-        body={
-          <Form
-            title="Kalkulator walut"
-            currencies={currencies}
-            calcResult={calcResult}
-            resetResult={resetResult}
-          />
-        }
-        resultField={<ResultField result={result} />}
-      />
+        <Calculator
+          body={
+            <Form
+              title="Kalkulator walut"
+              currencies={currencies}
+              calcResult={calcResult}
+              resetResult={resetResult}
+            />
+          }
+          resultField={<ResultField result={result} />}
+        />
 
-      <Footer />
+        <Footer />
 
-    </Background>
+      </Main>
+    </Container>
   );
 };
 

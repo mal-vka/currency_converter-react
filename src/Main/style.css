@@ -1,0 +1,7 @@
+.main {
+    flex-basis: 800px;
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 0 20px 0 20px;
+    background: rgba(221, 221, 221, 0.8);
+}
